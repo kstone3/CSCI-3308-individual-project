@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Saved Searches</title>
+    <%- include('../partials/header') %>
+</head>
+<%- include('../partials/menu') %>
+<div class="jumbotron" style="text-align: center;">
+    <h6 class="display-3">Saved Searches</h6>
+</div>
+    <div class="table-responsive">
+    <table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Image link</th>
+        <th>Website link</th>
+        <th>Language</th>
+        <th>Runtime</th>
+    </tr>
+    <% if(data){
+        var inf = '';
+        data.forEach(function(item){
+            inf += '<tr><td>' + item.title + '</td><td>' + item.img + '</td><td>' + item.link + '</td><td>' + item.lang + '</td><td>' + item.runtime + ' minutes</td></tr>';
+        }); %>
+        <%- inf %>
+    <% } %>
+</table>
+    </div>
+<%- include('../partials/footer') %>

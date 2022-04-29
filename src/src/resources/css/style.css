@@ -1,0 +1,118 @@
+:root {
+    /*master colors*/
+    --contrast-pale: #9eded4aa;
+    --contrast-light: #3cffe3;
+    --contrast: #26c1a9;
+    --contrast-dark: #1c8978;
+    --background-light: #ffffff;
+    --text: #7a7c7c;
+    --text-dark: #5a5c5c;
+    --background-dark: #d0d4d4;
+    --border-radius: 4px;
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--text);
+    border-color: var(--text)
+}
+
+a {
+    color: var(--contrast);
+}
+
+a:hover{
+    color: var(--contrast-dark);
+}
+
+.default-button {
+    background-color: var(--background-dark);
+    border-radius: var(--border-radius);
+    padding: 5px;
+    color: var(--text);
+    border-width: 0;
+}
+
+.default-button:hover {
+    background-color: var(--contrast);
+}
+
+.dark-button {
+    background-color: var(--text);
+    border-radius: var(--border-radius);
+    color: var(--background-light);
+    border-width: 0;
+}
+
+.dark-button:hover {
+    background-color: var(--contrast-dark);
+    color: var(--background-light);
+}
+
+.contrast-button{
+    background-color: var(--contrast);
+    border-radius: var(--border-radius);
+    color: var(--background-light);
+    border-width: 0;
+}
+
+.contrast-button:hover{
+    background-color: var(--contrast-dark);
+}
+
+
+.nav-link:hover {
+    color: var(--contrast) !important;
+}
+
+#search-filter-div {
+    margin-left: 20px;
+    padding: 10px 10px 10px 10px;
+    background-color: var(--background-dark);
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+#search-filter-div label{
+    padding-bottom: 0;
+    padding-top: 10px;
+}
+
+select{
+    width: 100%;
+    word-wrap: break-word;
+    color: var(--text);
+}
+
+input{
+    width: 100%;
+    word-wrap: break-word;
+    color: var(--text);
+}
+
+.slider{
+    background-color: var(--background-dark);
+}
+
+.center {
+    height: 200px;
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+tr.table-header th{
+    color: var(--text-dark);
+}
+tr.table-row td{
+    color: var(--text-dark);
+    padding: 6px 6px 6px 15px;
+}
+table.alt-rows tr:nth-child(even){
+    background-color: var(--contrast-pale);
+}
+

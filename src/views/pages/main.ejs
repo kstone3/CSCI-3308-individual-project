@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <%- include('../partials/header') %>
+    <link href="../../resources/css/main.css" rel="stylesheet" />
+    <script src="../../resources/js/script.js"></script>
+</head>
+<%- include('../partials/menu') %>
+<br>
+<form action="javascript:search();" method="post">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-5">
+          <input
+            class="form-control"
+            type="text"
+            name="title"
+            id="formTitle"
+            placeholder="Enter TV Show"
+          />
+        </div>
+        <div class="col-1">
+            <button type="submit" value="Submit" onclick="clearPage()">search</button>
+          </div>
+        </div>
+</form>
+<div class="card-columns" id="cards">
+
+</div>
+<br>
+<div class="text-center">
+    <a
+            href="#myModal"
+            class="btn btn-info dark-button"
+            data-toggle="modal"
+    >Add Search Result</a
+    >
+</div>
+</div>
+<div id="myModal" class="modal fade">
+<div class="modal-dialog modal-login">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Save Searches?</h4>
+            <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-hidden="true"
+            >
+                &times;
+            </button>
+        </div>
+        <form id="saveSearches">
+            <div class="modal-body">
+                <div class="form-group">
+                    <button id="my_submit_button" class="btn btn-block contrast-button" onclick="send();">
+                        Yes
+                    </button>
+                </div>
+            </div>
+        </form>
+        <form>
+            <div class="modal-body">
+                <div class="form-group">
+            <button type="button" data-dismiss="modal" class="btn btn-block contrast-button">
+                No
+            </button>
+        </div>
+    </div>
+        </form>
+</div>
+</div>
+</div>
+
+<%- include('../partials/footer') %>
